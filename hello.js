@@ -1,2 +1,7 @@
-const req = { url: "https://example.com", method: "GET" };
-handleRequest(req.url, req.method);
+"use strict";
+function padLeft(padding, input) {
+    if (typeof padding === "number") {
+        return new Array(padding + 1).join(" ") + input;
+    }
+    return padding + input;
+}
