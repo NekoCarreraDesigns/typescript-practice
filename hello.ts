@@ -1,6 +1,9 @@
-function padLeft(padding: number | string, input: string): string {
-  if (typeof padding === "number"){
-    return new Array(padding + 1).join(" ") + input; 
+type Fish = { swim: () => void };
+type Bird = { fly: () => void};
+
+function move(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    return animal.swim();
   }
-  return padding + input;
+  return animal.fly();
 }
